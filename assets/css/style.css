@@ -1,0 +1,304 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Happiness-Sans-Regualr17";
+  src: url(../fonts/hint/Happiness-Sans-Regualr17.otf);
+  src: url(../fonts/hint/Happiness-Sans-Regualr17.woff) format(woff);
+  src: local(※),
+    url(../fonts/hint/Happiness-Sans-Regualr17.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Happiness-Sans-Bold17";
+  src: url(../fonts/hint/Happiness-Sans-Bold17.otf);
+  src: url(../fonts/hint/Happiness-Sans-Bold17.woff) format(woff);
+  src: local(※),
+    url(../fonts/hint/Happiness-Sans-Bold17.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Happiness-Sans-Title17";
+  src: url(../fonts/hint/Happiness-Sans-Title17.otf);
+  src: url(../fonts/hint/Happiness-Sans-Title17.woff) format(woff);
+  src: local(※),
+    url(../fonts/hint/Happiness-Sans-Title17.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Happiness-Sans-Regualr18";
+  src: url(../fonts/no-hint/Happiness-Sans-Regualr18.otf);
+  src: url(../fonts/no-hint/Happiness-Sans-Regualr18.woff) format(woff);
+  src: local(※),
+    url(../fonts/no-hint/Happiness-Sans-Regualr18.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Happiness-Sans-Bold18";
+  src: url(../fonts/no-hint/Happiness-Sans-Bold18.otf);
+  src: url(../fonts/no-hint/Happiness-Sans-Bold18.woff) format(woff);
+  src: local(※),
+    url(../fonts/no-hint/Happiness-Sans-Bold18.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Happiness-Sans-Title18";
+  src: url(../fonts/no-hint/Happiness-Sans-Title18.otf);
+  src: url(../fonts/no-hint/Happiness-Sans-Title18.woff) format(woff);
+  src: local(※),
+    url(../fonts/no-hint/Happiness-Sans-Title18.woff2) format("woff2");
+}
+@font-face {
+  font-family: "HappinessSansVF19";
+  src: url(../fonts/vf/HappinessSansVF19.ttf);
+  src: url(../fonts/vf/HappinessSansVF19.woff) format(woff);
+  src: local(※), url(../fonts/vf/HappinessSansVF19.woff2) format("woff2");
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  padding: 4rem 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+article {
+  max-width: 125ch;
+  margin: 0 auto;
+}
+
+article * {
+  margin-bottom: 1rem;
+}
+
+article header {
+  margin-bottom: 2rem;
+}
+
+article h1,
+address {
+  font-size: 1.5rem;
+}
+
+article h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+article h3 {
+  margin: 1rem 0;
+}
+
+article p {
+  margin: 0 auto;
+}
+
+em::before {
+  content: "「";
+  margin-left: -0.5rem;
+}
+
+em::after {
+  content: "」";
+  margin-right: -0.5rem;
+}
+
+sup {
+  position: relative;
+  font-size: 0.5rem;
+  bottom: 1ex;
+}
+
+input {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#value-wght {
+  position: fixed;
+  top: 12.5px;
+  left: calc(50% + 84px);
+  transform: translateX(-50%);
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  top: 12px;
+  left: 16px;
+}
+
+iframe {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: serif;
+}
+
+.hint-regular-8px {
+  font-family: "Happiness-Sans-Regualr17";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.hint-regular-16px {
+  font-family: "Happiness-Sans-Regualr17";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.hint-regular-32px {
+  font-family: "Happiness-Sans-Regualr17";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hint-regular-64px {
+  font-family: "Happiness-Sans-Regualr17";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.hint-bold-8px {
+  font-family: "Happiness-Sans-Bold17";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.hint-bold-16px {
+  font-family: "Happiness-Sans-Bold17";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.hint-bold-32px {
+  font-family: "Happiness-Sans-Bold17";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hint-bold-64px {
+  font-family: "Happiness-Sans-Bold17";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.hint-title-8px {
+  font-family: "Happiness-Sans-Title17";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.hint-title-16px {
+  font-family: "Happiness-Sans-Title17";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.hint-title-32px {
+  font-family: "Happiness-Sans-Title17";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hint-title-64px {
+  font-family: "Happiness-Sans-Title17";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-hint-regular-8px {
+  font-family: "Happiness-Sans-Regualr18";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.no-hint-regular-16px {
+  font-family: "Happiness-Sans-Regualr18";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.no-hint-regular-32px {
+  font-family: "Happiness-Sans-Regualr18";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.no-hint-regular-64px {
+  font-family: "Happiness-Sans-Regualr18";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-hint-bold-8px {
+  font-family: "Happiness-Sans-Bold18";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.no-hint-bold-16px {
+  font-family: "Happiness-Sans-Bold18";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.no-hint-bold-32px {
+  font-family: "Happiness-Sans-Bold18";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.no-hint-bold-64px {
+  font-family: "Happiness-Sans-Bold18";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.no-hint-title-8px {
+  font-family: "Happiness-Sans-Title18";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.no-hint-title-16px {
+  font-family: "Happiness-Sans-Title18";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.no-hint-title-32px {
+  font-family: "Happiness-Sans-Title18";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.no-hint-title-64px {
+  font-family: "Happiness-Sans-Title18";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.vf-8px {
+  font-family: "HappinessSansVF19";
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+.vf-16px {
+  font-family: "HappinessSansVF19";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.vf-32px {
+  font-family: "HappinessSansVF19";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.vf-64px {
+  font-family: "HappinessSansVF19";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
