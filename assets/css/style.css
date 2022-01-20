@@ -69,42 +69,34 @@ html {
 }
 
 body {
-  padding: 6rem 1rem;
+  padding: 6rem 2rem;
   font-size: 1rem;
   line-height: 1.65;
   word-break: keep-all;
+  white-space: normal;
+
+  max-width: 95%;
 }
 
 article {
-  max-width: 125ch;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 article * {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
-article header {
-  margin-bottom: 2rem;
-  font-family: serif;
-}
-
-article h1,
-address {
-  font-size: 1.5rem;
-}
-
-article h2 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
-
-article h3 {
-  margin: 1rem 0;
+header {
+  position: fixed;
+  width: 100vw;
+  top: 1rem;
+  margin-left: -1rem;
+  color: purple;
 }
 
 article p {
-  margin: 0 auto;
+  margin: 12rem 0;
 }
 
 em::before {
@@ -125,7 +117,7 @@ sup {
 
 input {
   position: fixed;
-  top: 16px;
+  top: 86px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -133,35 +125,42 @@ input {
 
 #value-wght {
   position: fixed;
-  top: 12.5px;
+  top: 82.5px;
   left: calc(50% + 84px);
   transform: translateX(-50%);
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 720px) {
   input {
-    position: fixed;
-    top: 64px;
-    left: 50%;
+    top: 14rem;
+    left: 5.5rem;
     transform: translateX(-50%);
     z-index: 1;
   }
 
   #value-wght {
     position: fixed;
-    top: 60.5px;
-    left: calc(50% + 84px);
+    top: calc(14rem - 3.5px);
+    left: calc(5.5rem + 84px);
     transform: translateX(-50%);
   }
 }
 
-
 nav {
-  position: fixed;
+  position: absolute;
   z-index: 999;
-  top: 12px;
-  left: 16px;
+  top: 3rem;
+  left: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+  article p {
+    margin-top: 16rem;
+  }
+
+  nav {
+    top: 6rem;
+  }
 }
 
 iframe {
@@ -176,18 +175,40 @@ iframe {
   border: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  width: 160px;
+  display: inline-block;
+
+  cursor: pointer;
+  font-family: monospace;
+  transition: background 0.25s;
+}
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover {
+  background: silver;
+}
+
 a {
+  padding-right: 1rem;
+  display: inline-block;
   text-decoration: none;
-  font-family: serif;
+  font-family: monospace;
+  transition: background 0.25s;
+  color: blue;
 }
 
-a::after{
-  content: " ";
+a:hover {
+  background: silver;
 }
 
-.hint-regular-8px {
+.hint-regular-12px {
   font-family: "Happiness-Sans-Regualr17";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .hint-regular-16px {
@@ -205,9 +226,9 @@ a::after{
   font-size: 4rem;
   margin-bottom: 1rem;
 }
-.hint-bold-8px {
+.hint-bold-12px {
   font-family: "Happiness-Sans-Bold17";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .hint-bold-16px {
@@ -225,9 +246,9 @@ a::after{
   font-size: 4rem;
   margin-bottom: 1rem;
 }
-.hint-title-8px {
+.hint-title-12px {
   font-family: "Happiness-Sans-Title17";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .hint-title-16px {
@@ -246,9 +267,9 @@ a::after{
   margin-bottom: 1rem;
 }
 
-.no-hint-regular-8px {
+.no-hint-regular-12px {
   font-family: "Happiness-Sans-Regualr18";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .no-hint-regular-16px {
@@ -267,9 +288,9 @@ a::after{
   margin-bottom: 1rem;
 }
 
-.no-hint-bold-8px {
+.no-hint-bold-12px {
   font-family: "Happiness-Sans-Bold18";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .no-hint-bold-16px {
@@ -287,9 +308,9 @@ a::after{
   font-size: 4rem;
   margin-bottom: 1rem;
 }
-.no-hint-title-8px {
+.no-hint-title-12px {
   font-family: "Happiness-Sans-Title18";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .no-hint-title-16px {
@@ -308,9 +329,9 @@ a::after{
   margin-bottom: 1rem;
 }
 
-.vf-8px {
+.vf-12px {
   font-family: "HappinessSansVF19";
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
 }
 .vf-16px {
