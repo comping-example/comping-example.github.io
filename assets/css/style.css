@@ -87,16 +87,23 @@ article * {
   margin-bottom: 0rem;
 }
 
+article footer {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  
+}
+
+article p {
+  margin: 12rem 0;
+}
+
 header {
   position: fixed;
   width: 100vw;
   top: 1rem;
   margin-left: -1rem;
   color: purple;
-}
-
-article p {
-  margin: 12rem 0;
 }
 
 em::before {
