@@ -188,29 +188,29 @@ h3,
 h4 {
   width: 160px;
   display: inline-block;
-
   cursor: pointer;
-  font-family: monospace;
-  transition: background 0.25s;
+
 }
 h1:hover,
 h2:hover,
 h3:hover,
 h4:hover {
-  background: silver;
+text-decoration: underline;
 }
 
 a {
   padding-right: 1rem;
   display: inline-block;
   text-decoration: none;
-  font-family: monospace;
-  transition: background 0.25s;
-  color: blue;
+  color: purple;
 }
 
 a:hover {
-  background: silver;
+  text-decoration: underline;
+}
+
+.link {
+  font-size: 3rem;
 }
 
 .hint-regular-12px {
