@@ -9,6 +9,12 @@
   font-style: normal;
 }
 
+html {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+    sans-serif;
+}
+
 @font-face {
   font-family: "Happiness-Sans-Regualr17";
   src: url(../fonts/hint/Happiness-Sans-Regualr17.otf);
@@ -70,7 +76,6 @@ html {
 
 body {
   padding: 6rem 2rem;
-  font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   word-break: keep-all;
@@ -92,7 +97,6 @@ article footer {
   position: fixed;
   right: 16px;
   bottom: 16px;
-  
 }
 
 article p {
@@ -190,13 +194,12 @@ h4 {
   width: 160px;
   display: inline-block;
   cursor: pointer;
-
 }
 h1:hover,
 h2:hover,
 h3:hover,
 h4:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 a {
@@ -211,7 +214,7 @@ a:hover {
 }
 
 .link {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .hint-regular-12px {
