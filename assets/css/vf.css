@@ -106,7 +106,7 @@ body {
 }
 
 .slider-container {
-  width: 30%;
+  width: 20%;
 }
 
 .slider-container:not(:first-child) {
@@ -124,14 +124,7 @@ body {
 .slider-label {
   font-size: 1.25rem;
   font-style: normal;
-  font-variation-settings: "slnt" var(--text-slant);
   font-weight: 650;
-}
-
-.output {
-  font-style: normal;
-  font-variation-settings: "slnt" var(--text-slant);
-  font-weight: 400;
 }
 
 .slider {
@@ -139,7 +132,7 @@ body {
   width: 100%;
   height: 1rem;
   border-radius: .25rem;
-  background: #dee7ec;
+  background: silver;
   outline: none;
 }
 
@@ -149,7 +142,7 @@ body {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;
-  background: #456bd9;
+  background: gray;
   cursor: pointer;
 }
 
@@ -171,8 +164,8 @@ body {
 
 .button {
   background: #fff;
-  border: 3px solid #dee7ec;
-  border-radius: 6px;
+  border: 1px solid silver;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 400;
@@ -182,7 +175,7 @@ body {
 
 .button:hover,
 .button:focus {
-  background: #eaf0f3;
+  background: darkgray;
 }
 
 .vf-12px {
