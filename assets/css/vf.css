@@ -11,13 +11,17 @@
 
 @font-face {
   font-family: "HappinessSansVF19";
-  src: url(../fonts/vf/HappinessSansVF19.ttf);
-  src: url(../fonts/vf/HappinessSansVF19.woff) format(woff);
-  src: local(※), url(../fonts/vf/HappinessSansVF19.woff2) format("woff2-variations");
-  font-stretch: 75% 100%;
-  font-style: oblique 0deg 12deg;
-  font-weight: 400 900;
+  src: url(../fonts/vf/HappinessSansVF19.ttf) format("truetype");
+    font-weight: 400 900;
+    font-display: swap;
 }
+
+/* variation ranges 
+  opsz: 8-144        default: 12
+  wght: 100-900       default: 400
+  wdth: 75-125       default: 100
+  GRAD: -1 - 1     default: 0
+*/
 
 html {
   font-size: 16px;
@@ -30,9 +34,9 @@ html {
 }
 
 :root {
-  --text-weight: 500;
-  --text-width: 100;
-  --text-slant: 0;
+  --text-weight: 400;
+  --text-width: 400;
+  --text-opsz: 16;
 }
 
 header {
@@ -87,14 +91,13 @@ body {
 
 .container {
   font-family: "HappinessSansVF19", sans-serif;
-
 }
 
 #demo-text {
-  font-stretch: var(--text-width);
-  font-style: oblique var(--text-slant);
+
   font-weight: var(--text-weight);
-  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
+  font-variation-settings: "wght" var(--text-weight), 'opsz' var(--text-opsz);
+
   margin: 0;
 }
 
@@ -175,7 +178,6 @@ body {
   font-weight: 400;
   opacity: 1;
   padding: .25rem .75rem;
-  transition: background ease-in .2s;
 }
 
 .button:hover,
@@ -185,11 +187,7 @@ body {
 
 .vf-12px {
   font-family: "HappinessSansVF19";
-  font-size: 0.75rem;
-  font-stretch: var(--text-width);
-  font-style: oblique var(--text-slant);
-  font-weight: var(--text-weight);
-  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
+  font-size: 0.75rem;  
   margin-bottom: 1rem;
 }
 .vf-16px {
