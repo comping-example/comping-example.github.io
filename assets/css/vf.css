@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HappinessSansVF19";
+  src: url(../fonts/vf/HappinessSansVF19.ttf);
+  src: url(../fonts/vf/HappinessSansVF19.woff) format(woff);
+  src: local(※), url(../fonts/vf/HappinessSansVF19.woff2) format("woff2-variations");
+  font-stretch: 75% 100%;
+  font-style: oblique 0deg 12deg;
+  font-weight: 400 900;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+:root {
+  --text-weight: 500;
+  --text-width: 100;
+  --text-slant: 0;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 1rem;
+  margin-left: -1rem;
+  color: purple;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  width: 160px;
+  display: inline-block;
+  cursor: pointer;
+}
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover {
+  text-decoration: underline;
+}
+
+a {
+  padding-right: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 6rem 2rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  word-break: keep-all;
+  white-space: normal;
+
+  max-width: 95%;
+}
+
+.container {
+  font-family: "HappinessSansVF19", sans-serif;
+
+}
+
+#demo-text {
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
+  margin: 0;
+}
+
+.controls {
+  margin-top: 3rem;
+}
+
+.slider-container {
+  width: 30%;
+}
+
+.slider-container:not(:first-child) {
+  
+  margin-top: 3rem;
+} 
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  
+}
+
+.slider-label {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-variation-settings: "slnt" var(--text-slant);
+  font-weight: 650;
+}
+
+.output {
+  font-style: normal;
+  font-variation-settings: "slnt" var(--text-slant);
+  font-weight: 400;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1rem;
+  border-radius: .25rem;
+  background: #dee7ec;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #456bd9;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #456bd9;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+.slider::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+
+.button {
+  background: #fff;
+  border: 3px solid #dee7ec;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 1;
+  padding: .25rem .75rem;
+  transition: background ease-in .2s;
+}
+
+.button:hover,
+.button:focus {
+  background: #eaf0f3;
+}
+
+.vf-12px {
+  font-family: "HappinessSansVF19";
+  font-size: 0.75rem;
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
+  margin-bottom: 1rem;
+}
+.vf-16px {
+  font-family: "HappinessSansVF19";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.vf-19px {
+  font-family: "HappinessSansVF19";
+  font-size: 19px;
+  margin-bottom: 1rem;
+}
+.vf-32px {
+  font-family: "HappinessSansVF19";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.vf-64px {
+  font-family: "HappinessSansVF19";
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}

@@ -4,41 +4,41 @@ $(document).ready(function () {
     $("article").hide();
   });
 });
+const container = document.querySelector(".container");
+const sliders = document.querySelectorAll(".slider");
+const sliderValues = document.querySelectorAll(".output");
+const buttons = document.querySelectorAll(".button");
 
-document
-  .getElementById("slider-wght")
-  .addEventListener("input", function () {
-    let axisValue = document.getElementById("slider-wght").value;
+// Display property values
+for (let i = 0; i < sliders.length; i++) {
+  sliderValues[i].innerHTML = sliders[i].value;
+}
 
-    document.getElementById("testarea0").style.fontWeight = axisValue;
+// Update text property and displayed property value for each slider
+sliders.forEach(slider => {
+  const sliderIndex = slider.getAttribute("data-index");
+  const output = document.querySelector(
+    `.output[data-index="${sliderIndex}"]`
+  );
+  slider.oninput = function () {
+    container.style.setProperty(`--${this.id}`, this.value);
+    output.innerHTML = this.value;
+  };
+});
 
-    document.getElementById("value-wght").innerText = axisValue;
-  });
-document
-  .getElementById("slider-wght")
-  .addEventListener("input", function () {
-    let axisValue = document.getElementById("slider-wght").value;
-
-    document.getElementById("testarea1").style.fontWeight = axisValue;
-
-    document.getElementById("value-wght").innerText = axisValue;
-  });
-
-document
-  .getElementById("slider-wght")
-  .addEventListener("input", function () {
-    let axisValue = document.getElementById("slider-wght").value;
-
-    document.getElementById("testarea2").style.fontWeight = axisValue;
-
-    document.getElementById("value-wght").innerText = axisValue;
-  });
-document
-  .getElementById("slider-wght")
-  .addEventListener("input", function () {
-    let axisValue = document.getElementById("slider-wght").value;
-
-    document.getElementById("testarea3").style.fontWeight = axisValue;
-
-    document.getElementById("value-wght").innerText = axisValue;
-  });
+// Reset text property and update display property value for each slider
+buttons.forEach(button => {
+  const buttonIndex = button.getAttribute("data-index");
+  const resetOutput = document.querySelector(
+    `.output[data-index="${buttonIndex}"]`
+  );
+  const resetSlider = document.querySelector(
+    `.slider[data-index="${buttonIndex}"]`
+  );
+  button.onclick = function () {
+    container.style.removeProperty(`--${resetSlider.id}`);
+    resetOutput.innerHTML = resetSlider.defaultValue;
+    resetSlider.value = resetSlider.defaultValue;
+    console.log(resetSlider.defaultValue);
+  };
+});

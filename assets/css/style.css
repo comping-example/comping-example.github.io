@@ -61,7 +61,16 @@ html {
   font-family: "HappinessSansVF19";
   src: url(../fonts/vf/HappinessSansVF19.ttf);
   src: url(../fonts/vf/HappinessSansVF19.woff) format(woff);
-  src: local(※), url(../fonts/vf/HappinessSansVF19.woff2) format("woff2");
+  src: local(※), url(../fonts/vf/HappinessSansVF19.woff2) format("woff2-variations");
+  font-stretch: 75% 100%;
+  font-style: oblique 0deg 12deg;
+  font-weight: 400 900;
+}
+
+:root {
+  --text-weight: 500;
+  --text-width: 100;
+  --text-slant: 0;
 }
 
 html {
@@ -127,36 +136,6 @@ sup {
   bottom: 1ex;
 }
 
-input {
-  position: fixed;
-  top: 86px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-#value-wght {
-  position: fixed;
-  top: 82.5px;
-  left: calc(50% + 84px);
-  transform: translateX(-50%);
-}
-
-@media screen and (max-width: 720px) {
-  input {
-    top: 14rem;
-    left: 5.5rem;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  #value-wght {
-    position: fixed;
-    top: calc(14rem - 3.5px);
-    left: calc(5.5rem + 84px);
-    transform: translateX(-50%);
-  }
-}
 
 nav {
   position: absolute;
@@ -371,6 +350,10 @@ a:hover {
 .vf-12px {
   font-family: "HappinessSansVF19";
   font-size: 0.75rem;
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
   margin-bottom: 1rem;
 }
 .vf-16px {
@@ -391,5 +374,9 @@ a:hover {
 .vf-64px {
   font-family: "HappinessSansVF19";
   font-size: 4rem;
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
   margin-bottom: 1rem;
 }
