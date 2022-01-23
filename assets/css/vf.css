@@ -106,7 +106,7 @@ body {
 }
 
 .slider-container {
-  width: 20%;
+  width: 200px;
 }
 
 .slider-container:not(:first-child) {
